@@ -2949,10 +2949,142 @@ ft3" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft3')" disabled></t
             </tr>
         </tbody>
     </table>
+
+    <div class="container mt-5">
+        <h2>Building and Floor Details</h2>
+        <button type="button" class="btn btn-primary mb-3" onclick="addFloor()">Add Floor</button>
+        <div style="overflow-x: auto;">
+            <table class="table table-bordered" id="buildingTable">
+                <thead>
+                    <tr>
+                        <th style="min-width: 100px;">Unit</th>
+                        <th style="min-width: 100px;">Floor</th>
+                        <th style="min-width: 150px;">Select Floor</th>
+                        <th style="min-width: 150px;">Use of Floor</th>
+                        <th style="min-width: 150px;">Name of Building</th>
+                        <th style="min-width: 100px;">Completion %</th>
+                        <th style="min-width: 150px;">Stage of Construction</th>
+                        <th style="min-width: 150px;">Approved FAR Builtup Area</th>
+                        <th style="min-width: 150px;">Approved Non FAR Builtup Area</th>
+                        <th style="min-width: 150px;">Actual Builtup Area</th>
+                        <th style="min-width: 150px;">As per MOS Considered Builtup Area</th>
+                        <th style="min-width: 150px;">Considered Builtup Area</th>
+                        <th style="min-width: 150px;">Builtup area in required unit</th>
+                        <th style="min-width: 150px;">Prevailing Reconstruction Rates</th>
+                        <th style="min-width: 150px;">Services Weightage</th>
+                        <th style="min-width: 150px;">Weighted Construction Rates</th>
+                        <th style="min-width: 150px;">Economic Life of Building (Years)</th>
+                        <th style="min-width: 150px;">Age of Building (Years)</th>
+                        <th style="min-width: 150px;">Life expectancy (Years)</th>
+                        <th style="min-width: 150px;">Observed Depreciation %</th>
+                        <th style="min-width: 150px;">Depreciation%</th>
+                        <th style="min-width: 150px;">Depreciated Reconstruction Rates</th>
+                        <th style="min-width: 150px;">Depreciation Amount</th>
+                        <th style="min-width: 150px;">Depreciated Reconstruction Cost</th>
+                        <th style="min-width: 150px;">Type of Structure</th>
+                        <th style="min-width: 150px;">Type of Roof</th>
+                        <th style="min-width: 100px;">Height</th>
+                        <th style="min-width: 200px;">Brief Details of Building/ Floor</th>
+                        <th style="min-width: 150px;">Joinery/ Doors & Windows</th>
+                        <th style="min-width: 150px;">Flooring, Skirting, Dadoing</th>
+                        <th style="min-width: 150px;">Type of wiring</th>
+                        <th style="min-width: 150px;">Class of fitting</th>
+                        <th style="min-width: 150px;">Number of Light Points</th>
+                        <th style="min-width: 100px;">Fan Points</th>
+                        <th style="min-width: 100px;">Spare Plug Points</th>
+                        <th style="min-width: 200px;">No. Of water closet and their type</th>
+                        <th style="min-width: 150px;">No. of wash basins</th>
+                        <th style="min-width: 100px;">No. of urinals</th>
+                        <th style="min-width: 100px;">No. of bath tubes</th>
+                        <th style="min-width: 200px;">Water meter, taps, etc.</th>
+                        <th style="min-width: 200px;">Any Other fixture</th>
+                        <th style="min-width: 100px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 
 <script>
-
+    function addFloor() {
+        const tableBody = document.getElementById('buildingTable').getElementsByTagName('tbody')[0];
+        const newRow = tableBody.insertRow();
+    
+        // Create cells for the new row
+        for (let i = 0; i < 42; i++) { // 39 columns as per your requirement
+            const newCell = newRow.insertCell(i);
+            if (i === 2) { // Select Floor column
+                const select = document.createElement('select');
+                select.className = 'form-control';
+                select.innerHTML = `
+                    <option value="Floor 1">Floor 1</option>
+                    <option value="Floor 2">Floor 2</option>
+                    <option value="Floor 3">Floor 3</option>
+                    <option value="Floor 4">Floor 4</option>
+                `;
+                newCell.appendChild(select);
+            } else if (i === 41) { // Action column
+                const removeButton = document.createElement('button');
+                removeButton.className = 'btn btn-danger btn-sm';
+                removeButton.innerText = 'Remove';
+                removeButton.onclick = function() {
+                    removeFloor(newRow);
+                };
+                newCell.appendChild(removeButton);
+    
+                const duplicateButton = document.createElement('button');
+                duplicateButton.className = 'btn btn-secondary btn-sm ms-2'; // Add margin to the left
+                duplicateButton.innerText = 'Duplicate';
+                duplicateButton.onclick = function() {
+                    duplicateRow(newRow);
+                };
+                newCell.appendChild(duplicateButton);
+            } else {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'form-control';
+                newCell.appendChild(input);
+            }
+        }
+    }
+    
+    function duplicateRow(row) {
+        const tableBody = document.getElementById('buildingTable').getElementsByTagName('tbody')[0];
+        const newRow = tableBody.insertRow();
+    
+        // Loop through each cell in the original row
+        for (let i = 0; i < row.cells.length; i++) {
+            const newCell = newRow.insertCell(i);
+            const originalCell = row.cells[i];
+    
+            // If the cell contains an input, duplicate its value
+            if (originalCell.querySelector('input')) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'form-control';
+                input.value = originalCell.querySelector('input').value; // Copy value
+                newCell.appendChild(input);
+            } else if (originalCell.querySelector('select')) {
+                const select = document.createElement('select');
+                select.className = 'form-control';
+                select.innerHTML = originalCell.querySelector('select').innerHTML; // Copy options
+                newCell.appendChild(select);
+            } else {
+                newCell.innerHTML = originalCell.innerHTML; // Copy other content
+            }
+        }
+        }
+    
+    function removeFloor(row) {
+        const tableBody = document.getElementById('buildingTable').getElementsByTagName('tbody')[0];
+        tableBody.deleteRow(row.rowIndex - 1); // Remove the row
+    }
+    
     // Function to perform calculations
 // Function to perform calculations
 function calculateValues() {
