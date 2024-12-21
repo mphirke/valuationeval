@@ -1,0 +1,3313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">    
+    <title>Dynamic Form</title>
+</head>
+<style>
+    .form-label {
+        flex: 0 0 40%; /* Adjust this value to set label width */
+        max-width: 40%; /* Prevents label from exceeding this width */
+    }
+    .form-control, .form-select {
+        flex: 1; /* Input takes remaining space */
+    }
+    body{
+        background-color:rgb(239, 233, 233);
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Entry Form</h1>
+            <form id="entryForm" method="POST">
+                
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="customer_type" class="form-label mb-0">Customer Type:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="customer_type" name="customer_type" title="Type of Customer"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Individual">Individual</option>
+                                    
+                                        <option value="Proprietorship Firm">Proprietorship Firm</option>
+                                    
+                                        <option value="Partnership Firm">Partnership Firm</option>
+                                    
+                                        <option value="Limited Liability Partnership Firm (LLP)">Limited Liability Partnership Firm (LLP)</option>
+                                    
+                                        <option value="Company incorporated In India">Company incorporated In India</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="customer_name" class="form-label mb-0">Customer Name:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="customer_name" name="customer_name"
+                                       title="Enter Customer Name"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="customer_mobile" class="form-label mb-0">Mobile Number:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="customer_mobile" name="customer_mobile"
+                                       title="Enter customer mobile number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-geo-alt-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="customer_address" class="form-label mb-0">Customer Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="customer_address" name="customer_address"
+                                       title="Enter Customer Address"
+                                       class="form-control"
+                                       >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-envelope me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="customer_email" class="form-label mb-0">Email Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="customer_email" name="customer_email"
+                                       title="Enter Customer Email Address"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-vcard-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="represented_by" class="form-label mb-0">Represented By:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="represented_by" name="represented_by"
+                                       title="Name of Representative"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="representative_mobile" class="form-label mb-0">Representative Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="representative_mobile" name="representative_mobile"
+                                       title="Enter Representative Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-gear-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="service" class="form-label mb-0">Service:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                    	<div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Valuation</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">Map</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+    <label class="form-check-label" for="inlineCheckbox3">Estimate</label>
+  </div>
+    
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+  <label class="form-check-label" for="inlineCheckbox4">Technical Reports</label>
+</div>
+
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+<label class="form-check-label" for="inlineCheckbox4">Others</label>
+</div>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    <hr>
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="valuation_reference_type" class="form-label mb-0">Valuation Reference Type:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="valuation_reference_type" name="valuation_reference_type" title="Enter Valuation Reference Type"
+                                        class="form-select"
+                                        >
+                                    
+                                        <option value="VRN">VRN</option>
+                                    
+                                        <option value=" VRIN"> VRIN</option>
+                                    
+                                        <option value=" NON VRN"> NON VRN</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-file-earmark-text me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="valuation_reference_number" class="form-label mb-0">Valuation Reference Number:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="valuation_reference_number" name="valuation_reference_number"
+                                       title="Enter Valuation Reference Number"
+                                       class="form-control"
+                                       >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-arrow-left-right me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="previous_reference_of_service" class="form-label mb-0">Previous Reference of Service:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="previous_reference_of_service" name="previous_reference_of_service"
+                                       title="Enter Previous Reference of Service (e.g., VRN-FY)"
+                                       class="form-control"
+                                       >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-check-circle-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="purpose" class="form-label mb-0">Purpose:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="purpose" name="purpose" title="Mortgage Purpose in Bank"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Mortgage Purpose in Bank">Mortgage Purpose in Bank</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-building me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="recipient_of_service" class="form-label mb-0">Recipient of Service:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="recipient_of_service" name="recipient_of_service"
+                                       title="Enter Recipient of Service (e.g., Financial Institution/Bank)"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-file-earmark-zip me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="case_type" class="form-label mb-0">Case Type:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <div class="mb-3">
+                <label for="caseType" class="form-label">Case Type</label>
+                <select id="caseType" class="form-select" onchange="updateSubOptions()">
+                    <option value="">Select Case Type</option>
+                    <option value="HousingLoan">Housing Loan</option>
+                    <option value="BusinessLoan">Business Loan</option>
+                    <option value="ProjectLoan">Project Loan</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="subCategory" class="form-label">Sub Category</label>
+                <select id="subCategory" class="form-select">
+                    <option value="">Select Sub Category</option>
+                </select>
+            </div>
+            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-bank me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="name_of_financial_institution" class="form-label mb-0">Name of Financial Institution:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="name_of_financial_institution" name="name_of_financial_institution" title="Enter Name of Financial Institution (e.g., Bank of Maharashtra)"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Bank of India">Bank of India</option>
+                                    
+                                        <option value="Indian Bank">Indian Bank</option>
+                                    
+                                        <option value="Bank of Baroda">Bank of Baroda</option>
+                                    
+                                        <option value="Central Bank of India">Central Bank of India</option>
+                                    
+                                        <option value="Madhya Pradesh Gramin Bank">Madhya Pradesh Gramin Bank</option>
+                                    
+                                        <option value="Punjab National Bank">Punjab National Bank</option>
+                                    
+                                        <option value="State bank of India">State bank of India</option>
+                                    
+                                        <option value="Union Bank of India">Union Bank of India</option>
+                                    
+                                        <option value="Canera Bank">Canera Bank</option>
+                                    
+                                        <option value="Uco Bank">Uco Bank</option>
+                                    
+                                        <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+                                    
+                                        <option value="Punjab and Sindh Bank">Punjab and Sindh Bank</option>
+                                    
+                                        <option value="Bandhan">Bandhan</option>
+                                    
+                                        <option value="Axis Bank">Axis Bank</option>
+                                    
+                                        <option value="HDFC">HDFC</option>
+                                    
+                                        <option value="HDB">HDB</option>
+                                    
+                                        <option value="Indian Oversease Bank">Indian Oversease Bank</option>
+                                    
+                                        <option value="Syndicate Bank">Syndicate Bank</option>
+                                    
+                                        <option value="IDBI">IDBI</option>
+                                    
+                                        <option value="ICICI">ICICI</option>
+                                    
+                                        <option value="AU BANK">AU BANK</option>
+                                    
+                                        <option value="Self">Self</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-vcard-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="refered_by" class="form-label mb-0">Reffered by:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="refered_by" name="refered_by"
+                                       title="Referred by name"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="branch_of_recipient" class="form-label mb-0">Branch Of Recipient:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="branch_of_recipient" name="branch_of_recipient"
+                                       title="Enter Branch Of Recipient (e.g., Akola)"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="referred_by_date" class="form-label mb-0">Reffered by date:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="referred_by_date" name="referred_by_date"
+                            title="Referred by date"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="address_of_recipient" class="form-label mb-0">Address Of Recipient:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="address_of_recipient" name="address_of_recipient"
+                                       title="Enter Address Of Recipient (e.g., Jhanda Chouk)"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="assignement_date" class="form-label mb-0">Assignment Date:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="assignement_date" name="assignement_date"
+                            title="Assignment Date"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="tehsil" class="form-label mb-0">Tehsil:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="tehsil" name="tehsil"
+                                       title="Enter Tehsil Name (e.g., Akola)"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="inspection_date" class="form-label mb-0">Inspection Date:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="inspection_date" name="inspection_date"
+                            title="Inspection Date"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="district" class="form-label mb-0">District:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="district" name="district"
+                                       title="Enter District Name (e.g., Akola)"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="reinspection_date" class="form-label mb-0">Reinspection Date:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="reinspection_date" name="reinspection_date"
+                            title="Reinspection Date"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-pin-map-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="pin_code" class="form-label mb-0">Pin Code:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="pin_code" name="pin_code"
+                                       title="Enter Pin Code for Address."
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-check-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="valuation_date" class="form-label mb-0">Valuation date:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="valuation_date" name="valuation_date"
+                            title="Valuation date"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-globe me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="state" class="form-label mb-0">State:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="state" name="state" title="Enter State Name (e.g., Maharashtra State)"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    
+                                        <option value="Arunachal Pradesh ">Arunachal Pradesh </option>
+                                    
+                                        <option value="Assam">Assam</option>
+                                    
+                                        <option value="Bihar">Bihar</option>
+                                    
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                    
+                                        <option value="Goa">Goa</option>
+                                    
+                                        <option value="Gujarat">Gujarat</option>
+                                    
+                                        <option value="Haryana">Haryana</option>
+                                    
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    
+                                        <option value="Jharkhand">Jharkhand</option>
+                                    
+                                        <option value="Karnataka">Karnataka</option>
+                                    
+                                        <option value="Kerala">Kerala</option>
+                                    
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    
+                                        <option value="Maharashtra">Maharashtra</option>
+                                    
+                                        <option value="Manipur">Manipur</option>
+                                    
+                                        <option value="Meghalaya">Meghalaya</option>
+                                    
+                                        <option value="Mizoram">Mizoram</option>
+                                    
+                                        <option value="Nagaland">Nagaland</option>
+                                    
+                                        <option value="Odisha">Odisha</option>
+                                    
+                                        <option value="Punjab">Punjab</option>
+                                    
+                                        <option value="Rajasthan">Rajasthan</option>
+                                    
+                                        <option value="Sikkim">Sikkim</option>
+                                    
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                    
+                                        <option value="Telangana">Telangana</option>
+                                    
+                                        <option value="Tripura">Tripura</option>
+                                    
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                    
+                                        <option value="West Bengal">West Bengal</option>
+                                    
+                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    
+                                        <option value="Chandigarh">Chandigarh</option>
+                                    
+                                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                    
+                                        <option value="Daman and Diu">Daman and Diu</option>
+                                    
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                    
+                                        <option value="National Capital Territory of Delhi">National Capital Territory of Delhi</option>
+                                    
+                                        <option value="Puducherry">Puducherry</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+            <div class="conditional-dropdowns" style="display: none">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-person-fill me-2"></i>
+                        <label for="more_than_one_property_same_owner" class="form-label mb-0">Are these properties in the Name of Same owner:</label>
+                        <select id="more_than_one_property_same_owner" name="more_than_one_property_same_owner" title="Yes/No." class="form-select">
+                            <option value="">Select Yes/No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-arrow-right-arrow-left me-2"></i>
+                        <label for="more_than_one_property_adjacent" class="form-label mb-0">Are these properties adjacent to each other:</label>
+                        <select id="more_than_one_property_adjacent" name="more_than_one_property_adjacent" title="Yes/No." class="form-select">
+                            <option value="">Select Yes/No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-plus-square-fill me-2"></i>
+                        <label for="project_on_combined_properties" class="form-label mb-0">Project on combined properties:</label>
+                        <select id="project_on_combined_properties" name="project_on_combined_properties" title="Yes/No." class="form-select">
+                            <option value="">Select Yes/No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-house-door me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="number_of_properties" class="form-label mb-0">Number Of Properties:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="number_of_properties" name="number_of_properties"
+                                       title="Enter Number Of Properties."
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-key-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="ownership" class="form-label mb-0">Acquiring:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="ownership" name="ownership" title="Type of Ownership"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Ancestral">Ancestral</option>
+                                    
+                                        <option value=" Self Acquired"> Self Acquired</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="holding_type" class="form-label mb-0">Holding Type:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="holding_type" name="holding_type" title="Holding Type"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Freehold">Freehold</option>
+                                    
+                                        <option value=" Leasehold"> Leasehold</option>
+                                    
+                                        <option value=" License Hold"> License Hold</option>
+                                    
+                                        <option value=" Occupancy on Nazul/Abadi/Patta Land"> Occupancy on Nazul/Abadi/Patta Land</option>
+                                    
+                                        <option value=" Not Clear"> Not Clear</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-cash-coin me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="govt_value" class="form-label mb-0">Goverment Value:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="govt_value" name="govt_value"
+                                       title="Enter govertment value"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="holding_status_comment" class="form-label mb-0">Comment on Holding Status:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="holding_status_comment" name="holding_status_comment">
+                              </div>
+
+                            <div id="dynamicTextboxContainer_holding_status_comment" style="display: none">
+                                <input type="checkbox_text" id="holding_status_comment_text" name="holding_status_comment_text"
+                                       title="Comment on Holding Status"
+                                       class="form-control"
+                                       >
+                            </div>
+                            <script>
+                                var dynamicTextboxContainer_holding_status_comment = document.getElementById("dynamicTextboxContainer_holding_status_comment");
+                                var checkbox_holding_status_comment = document.getElementById("holding_status_comment");
+                                checkbox_holding_status_comment.addEventListener("change", function() {
+                                    if (checkbox_holding_status_comment.checked) {
+                                        dynamicTextboxContainer_holding_status_comment.style.display = "block";
+                                    } else {
+                                        dynamicTextboxContainer_holding_status_comment.style.display = "none";
+                                    }
+                                });
+                            </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-currency-rupee me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="registered_value" class="form-label mb-0">Registered For Rs.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="registered_value" name="registered_value"
+                                       title="Enter registered for rupees"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="limitations" class="form-label mb-0">Significant / Special Assumptions AND / OR any Limitations:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="limitations" name="limitations">
+                              </div>
+
+                            <div id="dynamicTextboxContainer_limitations" style="display: none">
+                                <input type="checkbox_text" id="limitations_text" name="limitations_text"
+                                       title="Significant / Special Assumptions AND / OR any Limitations"
+                                       class="form-control"
+                                       >
+                            </div>
+                            <script>
+                                var dynamicTextboxContainer_limitations = document.getElementById("dynamicTextboxContainer_limitations");
+                                var checkbox_limitations = document.getElementById("limitations");
+                                checkbox_limitations.addEventListener("change", function() {
+                                    if (checkbox_limitations.checked) {
+                                        dynamicTextboxContainer_limitations.style.display = "block";
+                                    } else {
+                                        dynamicTextboxContainer_limitations.style.display = "none";
+                                    }
+                                });
+                            </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="date_reg" class="form-label mb-0">Date of Registration:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="date_reg" name="date_reg"
+                            title="Date of Registration"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="caveats" class="form-label mb-0">Caveats, Limitation and Disclaimers:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="caveats" name="caveats">
+                              </div>
+
+                            <div id="dynamicTextboxContainer_caveats" style="display: none">
+                                <input type="checkbox_text" id="caveats_text" name="caveats_text"
+                                       title="-aveats, Limitation and Disclaimers"
+                                       class="form-control"
+                                       >
+                            </div>
+                            <script>
+                                var dynamicTextboxContainer_caveats = document.getElementById("dynamicTextboxContainer_caveats");
+                                var checkbox_caveats = document.getElementById("caveats");
+                                checkbox_caveats.addEventListener("change", function() {
+                                    if (checkbox_caveats.checked) {
+                                        dynamicTextboxContainer_caveats.style.display = "block";
+                                    } else {
+                                        dynamicTextboxContainer_caveats.style.display = "none";
+                                    }
+                                });
+                            </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="property_type" class="form-label mb-0">Property Type:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <select class="form-select" multiple id="property_type" name="property_type">
+                                
+                                <option value="Land">Land</option>
+                            
+                                <option value=" Building"> Building</option>
+                            
+                                <option value=" Indepedent Floor"> Indepedent Floor</option>
+                            
+                                <option value=" Multistory building"> Multistory building</option>
+                            
+                              </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="identification_property" class="form-label mb-0">Identification of Property:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="identification_property" name="identification_property"
+                                       title="Identification of property"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="brief_description" class="form-label mb-0">Brief description of Property:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="brief_description" name="brief_description"
+                                       title="Brief Description"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    <hr>
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="developers_details" class="form-label mb-0">Developers Details/Name Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="developers_details" name="developers_details"
+                                       title="Enter Developers Name and Address"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="developers_mobile" class="form-label mb-0">Developers Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="developers_mobile" name="developers_mobile"
+                                       title="Enter Developers Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-file-earmark-text me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="developers_registration_details" class="form-label mb-0">Developers Registration Details:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="developers_registration_details" name="developers_registration_details"
+                                       title="Enter Developers Registration Details"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="registration_mobile" class="form-label mb-0">Registration Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="registration_mobile" name="registration_mobile"
+                                       title="Enter Registration Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-file-earmark-check me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="rera_registration_details" class="form-label mb-0">RERA Registration Details:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="rera_registration_details" name="rera_registration_details"
+                                       title="Enter RERA Registration Details if Applicable"
+                                       class="form-control"
+                                       >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-layout-text-sidebar-reverse me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="approved_layout_details" class="form-label mb-0">Details of Approved Layout:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="approved_layout_details" name="approved_layout_details"
+                                       title="Enter Details of Approved Layout"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-calendar-check me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="date_of_approval" class="form-label mb-0">Date of Approval:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                            <input type="date" id="date_of_approval" name="date_of_approval"
+                            title="Enter Date of Approval"
+                            class="form-control"
+                             required >
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="sellers_details" class="form-label mb-0">Seller(s)/Transferer(s)/Lessor(s) Name &amp; Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="sellers_details" name="sellers_details"
+                                       title="Enter Seller(s) Name and Address"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="sellers_mobile" class="form-label mb-0">Seller(s) Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="sellers_mobile" name="sellers_mobile"
+                                       title="Enter Seller(s) Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="present_owners_details" class="form-label mb-0">Present Owner(s)/Lessee(s) Name &amp; Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="present_owners_details" name="present_owners_details"
+                                       title="Enter Present Owner(s) Name and Address"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="present_owners_mobile" class="form-label mb-0">Present Owner(s) Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="present_owners_mobile" name="present_owners_mobile"
+                                       title="Enter Present Owner(s) Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-person-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="willing_buyers_details" class="form-label mb-0">Willing Buyer(s) Name &amp; Address:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="willing_buyers_details" name="willing_buyers_details"
+                                       title="Enter Willing Buyer(s) Name and Address"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-telephone-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="willing_buyers_mobile" class="form-label mb-0">Willing Buyer(s) Mobile No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="willing_buyers_mobile" name="willing_buyers_mobile"
+                                       title="Enter Willing Buyer(s) Mobile Number"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="more_than_one_transferer_transferee" class="form-label mb-0">If More Than One Transferer/Transferee:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="more_than_one_transferer_transferee" name="more_than_one_transferer_transferee" title="Yes/No for Multiple Transferers/Transferees"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Yes/No">Yes/No</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="joint_ownership_co_ownership" class="form-label mb-0">Joint Ownership/Co-Ownership:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <select id="joint_ownership_co_ownership" name="joint_ownership_co_ownership" title="Yes/No for Joint Ownership or Co-Ownership"
+                                        class="form-select"
+                                         required >
+                                    
+                                        <option value="Yes/No">Yes/No</option>
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="pct_of_each_owner" class="form-label mb-0">Pct of Each Owner in Joint Ownership:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="pct_of_each_owner" name="pct_of_each_owner"
+                                       title="Enter Percentage of Each Owner in Joint Ownership"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-geo-alt-fill me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="location_situation_property" class="form-label mb-0">Location &amp; Situation Of Property:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="location_situation_property" name="location_situation_property"
+                                       title="Describe the Location &amp; Situation Of Property"
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-map me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="plot_no_survey_no" class="form-label mb-0">Plot No./Survey No.:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="plot_no_survey_no" name="plot_no_survey_no"
+                                       title=" Enter Plot No. or Survey No."
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-globe me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="state" class="form-label mb-0">State:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="state" name="state"
+                                       title=" Enter State Name "
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-pin-map me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="pin_code" class="form-label mb-0">Pin Code:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="number" id="pin_code" name="pin_code"
+                                       title=" Enter Pin Code "
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-map me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="district" class="form-label mb-0">District:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="district" name="district"
+                                       title=" Enter District Name "
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-map me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="mandal" class="form-label mb-0">Mandal:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="mandal" name="mandal"
+                                       title=" Enter Mandal Name "
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                                <i class="bi bi-map me-2"></i>  <!-- Add icon with margin -->
+                            
+                            <label for="tehsil" class="form-label mb-0">Tehsil:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                                <input type="text" id="tehsil" name="tehsil"
+                                       title=" Enter Tehsil Name "
+                                       class="form-control"
+                                        required >
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="easement" class="form-label mb-0">Easement if any:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="easement" name="easement">
+                    </div>
+                    <input type="text" id="easement_text" name="easement_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_easement = document.getElementById("easement");
+                        var textbox_easement = document.getElementById("easement_text");
+                        checkbox_easement.addEventListener("change", function() {
+                            if (checkbox_easement.checked) {
+                                textbox_easement.disabled = false;
+                            } else {
+                                textbox_easement.disabled = true;
+                                textbox_easement.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="special_remark" class="form-label mb-0">Special remark, if any like threat of Notification:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="special_remark" name="special_remark">
+                    </div>
+                    <input type="text" id="special_remark_text" name="special_remark_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_special_remark = document.getElementById("special_remark");
+                        var textbox_special_remark = document.getElementById("special_remark_text");
+                        checkbox_special_remark.addEventListener("change", function() {
+                            if (checkbox_special_remark.checked) {
+                                textbox_special_remark.disabled = false;
+                            } else {
+                                textbox_special_remark.disabled = true;
+                                textbox_special_remark.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="road_widening" class="form-label mb-0">For Road Widening:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="road_widening" name="road_widening">
+                    </div>
+                    <input type="text" id="road_widening_text" name="road_widening_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_road_widening = document.getElementById("road_widening");
+                        var textbox_road_widening = document.getElementById("road_widening_text");
+                        checkbox_road_widening.addEventListener("change", function() {
+                            if (checkbox_road_widening.checked) {
+                                textbox_road_widening.disabled = false;
+                            } else {
+                                textbox_road_widening.disabled = true;
+                                textbox_road_widening.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="acquisition" class="form-label mb-0">For Acquisition For other Public Purpose:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="acquisition" name="acquisition">
+                    </div>
+                    <input type="text" id="acquisition_text" name="acquisition_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_acquisition = document.getElementById("acquisition");
+                        var textbox_acquisition = document.getElementById("acquisition_text");
+                        checkbox_acquisition.addEventListener("change", function() {
+                            if (checkbox_acquisition.checked) {
+                                textbox_acquisition.disabled = false;
+                            } else {
+                                textbox_acquisition.disabled = true;
+                                textbox_acquisition.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="heritage_restrictions" class="form-label mb-0">Heritage Restrictions if any:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="heritage_restrictions" name="heritage_restrictions">
+                    </div>
+                    <input type="text" id="heritage_restrictions_text" name="heritage_restrictions_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_heritage_restrictions = document.getElementById("heritage_restrictions");
+                        var textbox_heritage_restrictions = document.getElementById("heritage_restrictions_text");
+                        checkbox_heritage_restrictions.addEventListener("change", function() {
+                            if (checkbox_heritage_restrictions.checked) {
+                                textbox_heritage_restrictions.disabled = false;
+                            } else {
+                                textbox_heritage_restrictions.disabled = true;
+                                textbox_heritage_restrictions.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="govt_enactments" class="form-label mb-0">Whether covered under any state/central govt. Enactments:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="govt_enactments" name="govt_enactments">
+                    </div>
+                    <input type="text" id="govt_enactments_text" name="govt_enactments_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_govt_enactments = document.getElementById("govt_enactments");
+                        var textbox_govt_enactments = document.getElementById("govt_enactments_text");
+                        checkbox_govt_enactments.addEventListener("change", function() {
+                            if (checkbox_govt_enactments.checked) {
+                                textbox_govt_enactments.disabled = false;
+                            } else {
+                                textbox_govt_enactments.disabled = true;
+                                textbox_govt_enactments.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="transferability" class="form-label mb-0">Transferability of developmental rights if any:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="transferability" name="transferability">
+                    </div>
+                    <input type="text" id="transferability_text" name="transferability_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_transferability = document.getElementById("transferability");
+                        var textbox_transferability = document.getElementById("transferability_text");
+                        checkbox_transferability.addEventListener("change", function() {
+                            if (checkbox_transferability.checked) {
+                                textbox_transferability.disabled = false;
+                            } else {
+                                textbox_transferability.disabled = true;
+                                textbox_transferability.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="slums_nearby" class="form-label mb-0">Slums / squatter settlements Near by:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="slums_nearby" name="slums_nearby">
+                    </div>
+                    <input type="text" id="slums_nearby_text" name="slums_nearby_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_slums_nearby = document.getElementById("slums_nearby");
+                        var textbox_slums_nearby = document.getElementById("slums_nearby_text");
+                        checkbox_slums_nearby.addEventListener("change", function() {
+                            if (checkbox_slums_nearby.checked) {
+                                textbox_slums_nearby.disabled = false;
+                            } else {
+                                textbox_slums_nearby.disabled = true;
+                                textbox_slums_nearby.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+                        </div>  <!-- End of previous row -->
+                    
+    
+                    
+                        <div class="row mb-3">  <!-- Start a new row -->
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="advantages_of_site" class="form-label mb-0">Advantages of Site:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="advantages_of_site" name="advantages_of_site">
+                    </div>
+                    <input type="text" id="advantages_of_site_text" name="advantages_of_site_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_advantages_of_site = document.getElementById("advantages_of_site");
+                        var textbox_advantages_of_site = document.getElementById("advantages_of_site_text");
+                        checkbox_advantages_of_site.addEventListener("change", function() {
+                            if (checkbox_advantages_of_site.checked) {
+                                textbox_advantages_of_site.disabled = false;
+                            } else {
+                                textbox_advantages_of_site.disabled = true;
+                                textbox_advantages_of_site.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+
+                
+                    
+    
+                    
+
+                    
+                    
+                    <div class="col-md-6">  <!-- Adjust column size as needed -->
+                        <div class="d-flex align-items-center">  <!-- Flexbox for alignment -->
+                            
+                            <label for="disadvantages_of_site" class="form-label mb-0">Disadvantages of site:</label>  <!-- 'me-2' adds margin to the right -->
+                            
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="disadvantages_of_site" name="disadvantages_of_site">
+                    </div>
+                    <input type="text" id="disadvantages_of_site_text" name="disadvantages_of_site_text" class="form-control" disabled>
+                    <script>
+                        var checkbox_disadvantages_of_site = document.getElementById("disadvantages_of_site");
+                        var textbox_disadvantages_of_site = document.getElementById("disadvantages_of_site_text");
+                        checkbox_disadvantages_of_site.addEventListener("change", function() {
+                            if (checkbox_disadvantages_of_site.checked) {
+                                textbox_disadvantages_of_site.disabled = false;
+                            } else {
+                                textbox_disadvantages_of_site.disabled = true;
+                                textbox_disadvantages_of_site.value = ''; // Clear the textbox when unchecked
+                            }
+                        });
+                    </script>
+
+                            
+                        </div>
+                    </div>  <!-- End of column -->
+    
+                    
+                        </div>  <!-- End of last row -->
+                    
+
+                                    
+                    <div class="form-section">
+                            <div class="row">
+                                <!-- Actual Use Section -->
+                                <div class="col">
+                                    <h5>Actual Use</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="residential">
+                                        <label class="form-check-label" for="residential">Residential</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="commercial">
+                                        <label class="form-check-label" for="commercial">Commercial</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="industrial" checked>
+                                        <label class="form-check-label" for="industrial">Industrial</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="institutional">
+                                        <label class="form-check-label" for="institutional">Institutional</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="hospital">
+                                        <label class="form-check-label" for="hospital">Hospital</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="public">
+                                        <label class="form-check-label" for="public">Public</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="none">
+                                        <label class="form-check-label" for="none">None</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="other">
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Development Section -->
+                                <div class="col">
+                                    <h5>Development</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="development" id="developed">
+                                        <label class="form-check-label" for="developed">Developed</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="development" id="developing">
+                                        <label class="form-check-label" for="developing">Developing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="development" id="undeveloped">
+                                        <label class="form-check-label" for="undeveloped">Undeveloped</label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Location Type Section -->
+                                <div class="col">
+                                    <h5>Location Type</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="residential-location">
+                                        <label class="form-check-label" for="residential-location">Residential</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="commercial-location">
+                                        <label class="form-check-label" for="commercial-location">Commercial</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="industrial-location">
+                                        <label class="form-check-label" for="industrial-location">Industrial</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="institutional-location">
+                                        <label class="form-check-label" for="institutional-location">Institutional</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="barren-lands">
+                                        <label class="form-check-label" for="barren-lands">Barren Lands</label>
+                                    </div>
+                                </div>
+                        
+
+                                <div class="col">
+                                    <h5>Locality</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="posh-location" name="locality">
+                                        <label class="form-check-label" for="posh-location">Posh</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="high-class-location" name="locality">
+                                        <label class="form-check-label" for="high-class-location">High class</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="middle-class-location" name="locality">
+                                        <label class="form-check-label" for="middle-class-location">Middle class</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="low-class-location" name="locality">
+                                        <label class="form-check-label" for="low-class-location">Low class</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="none-location" name="locality">
+                                        <label class="form-check-label" for="none-location">None</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h5>Proximity</h5>
+                                    <table class="table proximity-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Proximity</th>
+                                                <th>Lower Range</th>
+                                                <th>Higher Range</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Market/ Shopping</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hospitals</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Schools</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Recreational Facilities</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Community Hall</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Govt. Offices</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Residential Area</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus Stop</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Road & Transport</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Railway Station</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airport</td>
+                                                <td><input type="number" class="form-control" placeholder="Lower Range" required></td>
+                                                <td><input type="number" class="form-control" placeholder="Higher Range" required></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nature">Nature</label>
+                                    <select id="nature" class="form-control" onchange="updateNatureOptions()">
+                                        <option value="Dry Land">Dry Land</option>
+                                        <option value="Wet Land">Wet Land</option>
+                                        <option value="Reclaimed Land">Reclaimed Land</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="options">Options</label>
+                                    <select id="dry-land-options" class="form-control" style="display: none;">
+                                        <option value="">Select Dry Land Option</option>
+                                        <option value="Dry Land">Dry Land</option>
+                                        <option value="Solid Land">Solid Land</option>
+                                        <option value="Rocky Land">Rocky Land</option>
+                                    </select>
+                                    <select id="wet-land-options" class="form-control" style="display: none;">
+                                        <option value="">Select Wet Land Option</option>
+                                        <option value="Solid Land">Marshy Land</option>
+                                        <option value="Water Logged">Water Logged</option>
+                                    </select>
+                                    <select id="reclaimed-land-options" class="form-control" style="display: none;">
+                                        <option value="By Removing Water From Muddy Area">By Removing Water From Muddy Area                                        </option>
+                                        <option value="By Raising the Level of Land by Filling">By Raising the Level of Land by Filling</option>
+                                        <option value="By Removing Water From Muddy Area & By Raising the Level of Land by Filling">By Removing Water From Muddy Area & By Raising the Level of Land by Filling</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="level">Level</label>
+                                    <select id="level" class="form-control">
+                                        <option value="">Select Level</option>
+                                        <option value="Almost Leveled">Almost Leveled</option>
+                                        <option value="Leveled">Leveled</option>
+                                        <option value="Low Leveled">Low Leveled</option>
+                                        <option value="Undulating">Undulating</option>
+                                        <option value="Hilly">Hilly</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shape">Shape</label>
+                                    <select id="shape" class="form-control">
+                                        <option value="">Select Shape</option>
+                                        <option value="Almost Regular">Almost Regular</option>
+                                        <option value="Regular">Regular</option>
+                                        <option value="Irregular">Irregular</option>
+                                        <option value="Not Specified">Not Specified</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comments">Comments on Accessibility</label>
+                                    <textarea id="comments" class="form-control"></textarea>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="site-situation">Site Situation</label>
+                                    <select id="site-situation" class="form-control">
+                                        <option value="">Select Site Situation</option>
+                                        <option value="Land Locked Land">Land Locked Land</option>
+                                        <option value="Intermittent Plot">Intermittent Plot</option>
+                                        <option value="Corner Plot">Corner Plot</option>
+                                        <option value="Double Road Plot">Double Road Plot</option>
+                                        <option value="Double Corner Plot">Double Corner Plot</option>
+                                        <option value="Three Side Road">Three Side Road</option>
+                                        <option value="All side Road Plot">All side Road Plot</option>
+                                        <option value="Tendom Plot">Tendom Plot</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type-of-road">Type of Road</label>
+                                    <select id="type-of-road" class="form-control">
+                                        <option value="">Select Type of Road</option>
+                                        <option value="CC Road">CC Road</option>
+                                        <option value="Tar Road">Tar Road</option>
+                                        <option value="WBM Road">WBM Road</option>
+                                        <option value="Kachcha Road">Kachcha Road</option>
+                                        <option value="Paved Road">Paved Road</option>
+                                        <option value="None">None</option>
+                                        <option value="NA">NA</option>
+                                        <option value="U/ Construction Road">U/ Construction Road</option>
+                                        <option value="Undeveloped Yet">Undeveloped Yet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="width-of-road">Width of Road</label>
+                                    <input type="text" id="width-of-road" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name-of-road">Name of Road</label>
+                                    <input type="text" id="name-of-road" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        function updateNatureOptions() {
+                            const natureSelect = document.getElementById('nature');
+                            const dryLandOptions = document.getElementById('dry-land-options');
+                            const wetLandOptions = document.getElementById('wet-land-options');
+                            const reclaimedLandOptions = document.getElementById('reclaimed-land-options');
+                    
+                            // Hide all options initially
+                            dryLandOptions.style.display = 'none';
+                            wetLandOptions.style.display = 'none';
+                            reclaimedLandOptions.style.display = 'none';
+                    
+                            // Show options based on selected nature
+                            if (natureSelect.value === 'Dry Land') {
+                                dryLandOptions.style.display = 'block';
+                            } else if (natureSelect.value === 'Wet Land') {
+                                wetLandOptions.style.display = 'block';
+                            } else if (natureSelect.value === 'Reclaimed Land') {
+                                reclaimedLandOptions.style.display = 'block';
+                            }
+                        }
+                    </script>
+
+
+                    <div class="form-section">
+                        <h5>Dimensions</h5>
+                        <div class="col">
+                        <div class="form-check"> <input class="form-check-input" type="checkbox" id="dimensionsAsPerDocuments"> <label class="form-check-label" for="dimensionsAsPerDocuments">As per Site</label> </div>
+                        <div class="form-group row"> <label for="direction" class="col-sm-2 col-form-label">Direction</label> <label for="doc-dimensions" class="col-sm-2 col-form-label">Document Dimensions</label> <label for="actual-dimensions" class="col-sm-2 col-form-label">Actual Dimensions</label> <label for="front-depth" class="col-sm-2 col-form-label">Front:Depth</label> </div>
+                        <div class="form-group row">
+                           <label class="col-sm-2 col-form-label">North</label> 
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc-north"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-north"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="front-north"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <label class="col-sm-2 col-form-label">South</label> 
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc-south"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-south"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="front-south"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <label class="col-sm-2 col-form-label">East</label> 
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc-east" > </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-east"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="front-east"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <label class="col-sm-2 col-form-label">West</label> 
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc-west"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-west"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="front-west"> </div>
+                        </div>
+
+                        <div class="form-group"> <label for="comments">Comments:</label> <input type="text" class="form-control" id="comments"> </div>
+
+                     <!-- Boundaries Section --> 
+                        <h5>Boundaries</h5>
+                        <div class="form-check"> <input class="form-check-input" type="checkbox" id="boundariesAsPerDocuments"> <label class="form-check-label" for="boundariesAsPerDocuments">As per Site</label> </div>
+                        <div class="form-group row"> <label class="col-sm-2 col-form-label">Boundary As per Document 1</label> <label class="col-sm-2 col-form-label">Boundary As per Document 2</label> <label class="col-sm-2 col-form-label">Actual Boundary</label> </div>
+                        <div class="form-group row">
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc1-north"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc2-north"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-north-boundary"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc1-south"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc2-south"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-south-boundary"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc1-east"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc2-east"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-east-boundary"> </div>
+                        </div>
+                        <div class="form-group row">
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc1-west"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="doc2-west"> </div>
+                           <div class="col-sm-2"> <input type="text" class="form-control" id="actual-west-boundary"> </div>
+                        </div>
+                        <div class="form-group"> <label for="boundary-comments">Comments:</label> <input type="text" class="form-control" id="boundary-comments"> </div>
+                     </div>
+                     <!-- Google Coordinates Section --> 
+                     <div class="form-section">
+                     <h5>Google Coordinates</h5>
+                     <div class="form-group row">
+                     <div class="col-sm-10"> <input type="text" class="form-control" id="google-coordinates" placeholder="Enter coordinates"> </div>
+                     <div class="col-sm-2"> <button type="button" class="btn btn-primary" onclick="openGoogleMaps()">Open in Google Maps</button> </div>
+
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h2 class="text-center">Lease Details</h2>
+                        <hr>
+                    </div>
+                </div>
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Use of Lease</th>
+                            <th scope="col">Type of Lease</th>
+                            <th scope="col">Kind of Lease</th>
+                            <th scope="col">Initial Premium</th>
+                            <th scope="col">Ground Rent per Annum</th>
+                            <th scope="col">Date of Commencement</th>
+                            <th scope="col">Date of Termination</th>
+                            <th scope="col">Remaining Period of Lease (Years)</th>
+                            <th scope="col">Term in (Years)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="useOfLease" placeholder="Use of Lease"></td>
+                            <td>
+                                <select class="form-control" id="typeOfLease">
+                                    <option value="Building Lease">Building Lease</option>
+                                    <option value="Occupational Lease">Occupational Lease</option>
+                                    <option value="Sub Lease">Sub Lease</option>
+                                    <option value="Lease For Life">Lease For Life</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control" id="kindOfLease">
+                                    <option value="Perpetual Lease">Perpetual Lease</option>
+                                    <option value="Tenancy at will">Tenancy at will</option>
+                                    <option value="Tenancy at sufferance">Tenancy at sufferance</option>
+                                    <option value="Tenancy by holding over">Tenancy by holding over</option>
+                                    <option value="Periodic lease">Periodic lease</option>
+                                    <option value="Lease for fixed period">Lease for fixed period</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="form-control" id="initialPremium"></td>
+                            <td><input type="text" class="form-control" id="groundRent"></td>
+                            <td><input type="date" class="form-control" id="dateOfCommencement"></td>
+                            <td><input type="date" class="form-control" id="dateOfTermination"></td>
+                            <td><input type="number" class="form-control" id="remainingPeriod"></td>
+                            <td><input type="number" class="form-control" id="termInYears"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">GESROI %</th>
+                            <th scope="col">R %</th>
+                            <th scope="col">r %</th>
+                            <th scope="col">Reversionary R</th>
+                            <th scope="col">Lessor Value</th>
+                            <th scope="col">Lessee Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="gesroi"></td>
+                            <td><input type="text" class="form-control" id="rPercentage"></td>
+                            <td><input type="text" class="form-control" id="rSmallPercentage"></td>
+                            <td><input type="text" class="form-control" id="reversionaryR"></td>
+                            <td><input type="text" class="form-control" id="lessorValue"></td>
+                            <td><input type="text" class="form-control" id="lesseeValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+<div class="form-row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="unearnedIncrease" class="form-label">Unearned increase payable to the lesser in the event of sale of transfer:</label>
+            <input type="text" class="form-control" id="unearnedIncrease">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="renewalClause" class="form-label">Renewal Clause:</label>
+            <input type="text" class="form-control" id="renewalClause">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="transferability" class="form-label">Comment on Transferability:</label>
+            <input type="text" class="form-control" id="transferability">
+        </div>
+    </div>
+</div>
+
+<h2 class="text-center">Schedule of Land Area</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>T&CP Land Use</th>
+            <th>Approved Use</th>
+            <th>Actual Use</th>
+            <th>Narration</th>
+            <th>
+                <input type="checkbox" id="hectaresCheckbox" onclick="toggleHectaresFields()"> Hectares
+            </th>
+            <th>
+                <input type="checkbox" id="acresCheckbox" onclick="toggleAcresFields()"> Acres
+            </th>
+            <th>
+                <input type="checkbox" id="sqmtCheckbox" onclick="toggleSqmtFields()"> Sqmt
+            </th>
+            <th>
+                <input type="checkbox" id="sqftCheckbox" onclick="toggleSqftFields()"> Sqft
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox"> Unspecified use Diverted</td>
+            <td><input type="checkbox"> Unspecified use Diverted</td>
+            <td><input type="checkbox"> None</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares1" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares1')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres1" placeholder="Acre" oninput="convertUnits(this.value, 'acres1')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt1" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt1')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft1" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft1')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Residential</td>
+            <td><input type="checkbox"> Residential</td>
+            <td><input type="checkbox"> Residential</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares2" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares2')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres2" placeholder="Acre" oninput="convertUnits(this.value, 'acres2')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt2" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt2')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft2" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft2')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Commercial</td>
+            <td><input type="checkbox"> Commercial</td>
+            <td><input type="checkbox"> Commercial</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares3" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares3')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres3" placeholder="Acre" oninput="convertUnits(this.value, 'acres3')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt3" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt3')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sq ```html
+ft3" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft3')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Industrial</td>
+            <td><input type="checkbox"> Industrial</td>
+            <td><input type="checkbox"> Industrial</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares4" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares4')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres4" placeholder="Acre" oninput="convertUnits(this.value, 'acres4')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt4" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt4')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft4" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft4')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Educational</td>
+            <td><input type="checkbox"> Educational</td>
+            <td><input type="checkbox"> Educational</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares5" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares5')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres5" placeholder="Acre" oninput="convertUnits(this.value, 'acres5')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt5" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt5')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft5" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft5')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Hospital</td>
+            <td><input type="checkbox"> Hospital</td>
+            <td><input type="checkbox"> Hospital</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares6" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares6')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres6" placeholder="Acre" oninput="convertUnits(this.value, 'acres6')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt6" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt6')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft6" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft6')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Public</td>
+            <td><input type="checkbox"> Public</td>
+            <td><input type="checkbox"> Public</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares7" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares7')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres7" placeholder="Acre" oninput="convertUnits(this.value, 'acres7')" disabled></td>
+            <td><input type="number ```html
+            " step="0.01" class="form-control" id="sqmt7" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt7')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft7" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft7')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Semipublic</td>
+            <td><input type="checkbox"> Semipublic</td>
+            <td><input type="checkbox"> Semipublic</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares8" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares8')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres8" placeholder="Acre" oninput="convertUnits(this.value, 'acres8')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt8" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt8')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft8" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft8')" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> Other</td>
+            <td><input type="checkbox"> Other</td>
+            <td><input type="checkbox"> Other</td>
+            <td><input type="text" class="form-control" placeholder="Enter narration"></td>
+            <td><input type="number" step="0.01" class="form-control" id="hectares9" placeholder="0.0000 Hect" oninput="convertUnits(this.value, 'hectares9')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="acres9" placeholder="Acre" oninput="convertUnits(this.value, 'acres9')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqmt9" placeholder="Sqmt" oninput="convertUnits(this.value, 'sqmt9')" disabled></td>
+            <td><input type="number" step="0.01" class="form-control" id="sqft9" placeholder="Sqft" oninput="convertUnits(this.value, 'sqft9')" disabled></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container mt-5">
+    <h2>Deduction in Area</h2>
+    <table class="table table-bordered" id="deductionTable">
+        <thead>
+            <tr>
+                <th>Cause for Deduction</th>
+                <th>Deducted Hectares</th>
+                <th>Deducted Acres</th>
+                <th>Deducted Sqft</th>
+                <th>Deducted Sqmt</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="deductRow1" class="form-control" placeholder="Enter cause"></td>
+                <td><input type="number" step="0.01" id="hectares_deduct_1" class="form-control" placeholder="Hectares" oninput="updateTotals(this.value, 'hectares_deduct_1')"></td>
+                <td><input type="number" step="0.01" id="acres_deduct_1" class="form-control" placeholder="Acres" oninput="updateTotals(this.value, 'acres_deduct_1')"></td>
+                <td><input type="number" step="0.01" id="sqft_deduct_1" class="form-control" placeholder="Sqft" oninput="updateTotals(this.value, 'sqft_deduct_1')"></td>
+                <td><input type="number" step="0.01" id="sqmt_deduct_1" class="form-control" placeholder="Sqmt" oninput="updateTotals(this.value, 'sqmt_deduct_1')"></td>
+                <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary mt-3" onclick="addRow()">Add Row</button>
+
+    <h4 class="mt-4">Total Deducted Area</h4>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td><strong>Total Hectares:</strong></td>
+                <td><span id="totalHectares">0.00</span></td>
+            </tr>
+            <tr>
+                <td><strong>Total Acres:</strong></td>
+                <td><span id="totalAcres">0.00</span></td>
+            </tr>
+            <tr>
+                <td><strong>Total Sqft:</strong></td>
+                <td><span id="totalSqft">0.00</span></td>
+            </tr>
+            <tr>
+                <td><strong>Total Sqmt:</strong></td>
+                <td><span id="totalSqmt">0.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    // Function to perform calculations
+// Function to perform calculations
+function calculateValues() {
+    // Get values from the first table
+    const initialPremium = parseFloat(document.getElementById('initialPremium').value) || 0;
+    const groundRent = parseFloat(document.getElementById('groundRent').value) || 0;
+    const remainingPeriod = parseFloat(document.getElementById('remainingPeriod').value) || 0;
+    const termInYears = parseFloat(document.getElementById('termInYears').value) || 0;
+
+    // Get values from the second table
+    const gesroi = parseFloat(document.getElementById('gesroi').value) || 0;
+    const rPercentage = parseFloat(document.getElementById('rPercentage').value) || 0;
+    const rSmallPercentage = parseFloat(document.getElementById('rSmallPercentage').value) || 0;
+
+    // Perform calculations
+    const totalGroundRent = groundRent * remainingPeriod; // Total ground rent over the remaining period
+    const lessorValue = initialPremium + totalGroundRent; // Lessor value calculation
+    const lesseeValue = lessorValue * (1 - (gesroi / 100)); // Lessee value calculation
+
+    // Adjust lessee value based on rPercentage and rSmallPercentage
+    const adjustedLesseeValue = lesseeValue * (1 + (rPercentage / 100)) * (1 + (rSmallPercentage / 100));
+
+    // Update the results in the respective fields
+    document.getElementById('lessorValue').value = lessorValue.toFixed(2); // Display lessor value
+    document.getElementById('lesseeValue').value = adjustedLesseeValue.toFixed(2); // Display adjusted lessee value
+}
+
+// Function to calculate term in years from dates
+function calculateTermInYears() {
+    const dateOfCommencement = new Date(document.getElementById('dateOfCommencement').value);
+    const dateOfTermination = new Date(document.getElementById('dateOfTermination').value);
+
+    if (dateOfCommencement && dateOfTermination) {
+        const timeDiff = dateOfTermination - dateOfCommencement; // Difference in milliseconds
+        const yearsDiff = timeDiff / (1000 * 60 * 60 * 24 * 365); // Convert milliseconds to years
+        document.getElementById('termInYears').value = Math.floor(yearsDiff); // Update term in years
+    }
+}
+
+// Add event listeners to input fields to trigger calculations
+document.getElementById('initialPremium').addEventListener('input', calculateValues);
+document.getElementById('groundRent').addEventListener('input', calculateValues);
+document.getElementById('remainingPeriod').addEventListener('input', calculateValues);
+document.getElementById('gesroi').addEventListener('input', calculateValues);
+document.getElementById('rPercentage').addEventListener('input', calculateValues);
+document.getElementById('rSmallPercentage').addEventListener('input', calculateValues);
+
+// Add event listeners for date fields to calculate term in years
+document.getElementById('dateOfCommencement').addEventListener('change', calculateTermInYears);
+document.getElementById('dateOfTermination').addEventListener('change', calculateTermInYears);
+
+    let rowCount = 1; // Initialize row count
+
+    document.getElementById('pin_code').addEventListener('input', function() {
+        const pinCodeInput = document.getElementById('pin_code');
+        const pinCode = pinCodeInput.value;
+    
+        // Validate pin code length
+        if (pinCode.length === 6) {
+            fetch(`https://india-pincode-api.p.rapidapi.com/v1/in/places/pincode?pincode=${pinCode}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'x-rapidapi-ua': 'RapidAPI-Playground',
+                    'x-rapidapi-key': '2ed5d3a559msh403b014a93f5e30p146ab3jsnd61e20063abf',
+                    'x-rapidapi-host': 'india-pincode-api.p.rapidapi.com'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200 && data.noOfItems > 0) {
+                    // Find the entry with the highest accuracy
+                    const highestAccuracyEntry = data.result.reduce((prev, current) => {
+                        return (prev.accuracy > current.accuracy) ? prev : current;
+                    });
+    
+                    // Create popover content
+                    const popoverContent = `
+                        <strong>Taluk:</strong> ${highestAccuracyEntry.taluk}<br>
+                        <strong>District:</strong> ${highestAccuracyEntry.districtname}<br>
+                        <strong>Place:</strong> ${highestAccuracyEntry.placename}<br>
+                        <strong>State:</strong> ${highestAccuracyEntry.statename}
+                    `;
+    
+                    // Create a popover element
+                    let popover = document.createElement('div');
+                    popover.className = 'popover';
+                    popover.style.position = 'absolute';
+                    popover.style.backgroundColor = '#fff';
+                    popover.style.border = '1px solid #ccc';
+                    popover.style.padding = '10px';
+                    popover.style.zIndex = '1000';
+                    popover.innerHTML = popoverContent;
+    
+                    // Position the popover next to the pin code input
+                    const rect = pinCodeInput.getBoundingClientRect();
+                    popover.style.left = rect.right + 'px'; // Position to the right of the input
+                    popover.style.top = rect.top + window.scrollY + 'px'; // Align with the top of the input
+    
+                    // Append the popover to the body
+                    document.body.appendChild(popover);
+    
+                    // Remove the popover after a few seconds
+                    setTimeout(() => {
+                        document.body.removeChild(popover);
+                    }, 5000); // Adjust the duration as needed
+                } else {
+                    alert('No details found for this pin code.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                alert('Error fetching data. Please try again later.');
+            });
+        }
+    });
+
+    function addRow() {
+        rowCount++; // Increment row count
+        const tableBody = document.getElementById('deductionTable').getElementsByTagName('tbody')[0];
+        const newRow = tableBody.insertRow();
+
+        newRow.innerHTML = `
+            <td><input type="text" id="deductRow${rowCount}" class="form-control" placeholder="Enter cause"></td>
+            <td><input type="number" step="0.01" id="hectares_deduct_${rowCount}" class="form-control" placeholder="Hectares" oninput="updateTotals(this.value, 'hectares_deduct_${rowCount}')"></td>
+            <td><input type="number" step="0.01" id="acres_deduct_${rowCount}" class="form-control" placeholder="Acres" oninput="updateTotals(this.value, 'acres_deduct_${rowCount}')"></td>
+            <td><input type="number" step="0.01" id="sqft_deduct_${rowCount}" class="form-control" placeholder="Sqft" oninput="updateTotals(this.value, 'sqft_deduct_${rowCount}')"></td>
+            <td><input type="number" step="0.01" id="sqmt_deduct_${rowCount}" class="form-control" placeholder="Sqmt" oninput="updateTotals(this.value, 'sqmt_deduct_${rowCount}')"></td>
+            <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Remove</button></td>
+        `;
+    }
+
+    function removeRow(button) {
+        const row = button.parentNode.parentNode; // Get the row of the button
+        row.parentNode.removeChild(row); // Remove the row from the table
+        rowCount--; // Decrement row count
+        updateTotals(); // Update totals after removal
+    }
+    function updateTotals(value, id) {
+        let totalHectares = 0;
+        let totalAcres = 0;
+        let totalSqft = 0;
+        let totalSqmt = 0;
+
+        convertUnitsDeduct(value,id);
+
+
+        const rows = document.querySelectorAll('#deductionTable tbody tr');
+        rows.forEach(row => {
+            const hectares = parseFloat(row.cells[1].querySelector('input').value) || 0;
+            const acres = parseFloat(row.cells[2].querySelector('input').value) || 0;
+            const sqft = parseFloat(row.cells[3].querySelector('input').value) || 0;
+            const sqmt = parseFloat(row.cells[4].querySelector('input').value) || 0;
+            
+
+            totalHectares += hectares;
+            totalAcres += acres;
+            totalSqft += sqft;
+            totalSqmt+= sqmt; });
+            document.getElementById('totalHectares').innerText = totalHectares.toFixed(2);
+            document.getElementById('totalAcres').innerText = totalAcres.toFixed(2);
+            document.getElementById('totalSqft').innerText = totalSqft.toFixed(2);
+            document.getElementById('totalSqmt').innerText = totalSqmt.toFixed(2);
+        }
+
+            
+    function toggleHectaresFields() {
+        const checkbox = document.getElementById('hectaresCheckbox');
+        const fields = document.querySelectorAll('input[id^="hectares"]:not(#hectaresCheckbox)'); // Exclude the checkbox itself
+        fields.forEach(field => field.disabled = !checkbox.checked);
+    }
+    
+    function toggleAcresFields() {
+        const checkbox = document.getElementById('acresCheckbox');
+        const fields = document.querySelectorAll('input[id^="acres"]:not(#acresCheckbox)'); // Exclude the checkbox itself
+        fields.forEach(field => field.disabled = !checkbox.checked);
+    }
+    
+    function toggleSqmtFields() {
+        const checkbox = document.getElementById('sqmtCheckbox');
+        const fields = document.querySelectorAll('input[id^="sqmt"]:not(#sqmtCheckbox)'); // Exclude the checkbox itself
+        fields.forEach(field => field.disabled = !checkbox.checked);
+    }
+    
+    function toggleSqftFields() {
+        const checkbox = document.getElementById('sqftCheckbox');
+        const fields = document.querySelectorAll('input[id^="sqft"]:not(#sqftCheckbox)'); // Exclude the checkbox itself
+        fields.forEach(field => field.disabled = !checkbox.checked);
+    }
+
+    function convertUnitsDeduct(value, id) {
+        var input = id;
+        var id_num = input.replace(/\D/g,'');
+        const hectares = parseFloat(document.getElementById('hectares_deduct_' + id_num).value) || 0;
+        const acres = parseFloat(document.getElementById('acres_deduct_' + id_num).value) || 0;
+        const sqmt = parseFloat(document.getElementById('sqmt_deduct_' + id_num).value) || 0;
+        const sqft = parseFloat(document.getElementById('sqft_deduct_' + id_num).value) || 0;
+    
+        // Conversion logic
+        if (id.startsWith('hectares')) {
+            document.getElementById('acres_deduct_' + id_num).value = (hectares * 2.47105).toFixed(2);
+            document.getElementById('sqmt_deduct_' + id_num).value = (hectares * 10000).toFixed(2);
+            document.getElementById('sqft_deduct_' + id_num).value = (hectares * 107639.104).toFixed(2);
+        } else if (id.startsWith('acres')) {
+            document.getElementById('hectares_deduct_' + id_num).value = (acres / 2.47105).toFixed(4);
+            document.getElementById('sqmt_deduct_' + id_num).value = (acres * 4046.86).toFixed(2);
+            document.getElementById('sqft_deduct_' + id_num).value = (acres * 43560).toFixed(2);
+        } else if (id.startsWith('sqmt')) {
+            document.getElementById('hectares_deduct_' + id_num).value = (sqmt / 10000).toFixed(4);
+            document.getElementById('acres_deduct_' + id_num).value = (sqmt / 4046.86).toFixed(4);
+            document.getElementById('sqft_deduct_' + id_num).value = (sqmt * 10.7639).toFixed(2);
+        } else if (id.startsWith('sqft')) {
+            document.getElementById('hectares_deduct_' + id_num).value = (sqft / 107639.104).toFixed(4);
+            document.getElementById('acres_deduct_' + id_num).value = (sqft / 43560).toFixed(4);
+            document.getElementById('sqmt_deduct_' + id_num).value = (sqft / 10.7639).toFixed(2);
+        }
+    }
+
+function convertUnits(value, id) {
+    var input = id;
+    var id_num = input.replace(/\D/g,'');
+    const hectares = parseFloat(document.getElementById('hectares' + id_num).value) || 0;
+    const acres = parseFloat(document.getElementById('acres' + id_num).value) || 0;
+    const sqmt = parseFloat(document.getElementById('sqmt' + id_num).value) || 0;
+    const sqft = parseFloat(document.getElementById('sqft' + id_num).value) || 0;
+
+    // Conversion logic
+    if (id.startsWith('hectares')) {
+        document.getElementById('acres' + id.replace('hectares', '')).value = (hectares * 2.47105).toFixed(2);
+        document.getElementById('sqmt' + id.replace('hectares', '')).value = (hectares * 10000).toFixed(2);
+        document.getElementById('sqft' + id.replace('hectares', '')).value = (hectares * 107639.104).toFixed(2);
+    } else if (id.startsWith('acres')) {
+        document.getElementById('hectares' + id.replace('acres', '')).value = (acres / 2.47105).toFixed(4);
+        document.getElementById('sqmt' + id.replace('acres', '')).value = (acres * 4046.86).toFixed(2);
+        document.getElementById('sqft' + id.replace('acres', '')).value = (acres * 43560).toFixed(2);
+    } else if (id.startsWith('sqmt')) {
+        document.getElementById('hectares' + id.replace('sqmt', '')).value = (sqmt / 10000).toFixed(4);
+        document.getElementById('acres' + id.replace('sqmt', '')).value = (sqmt / 4046.86).toFixed(4);
+        document.getElementById('sqft' + id.replace('sqmt', '')).value = (sqmt * 10.7639).toFixed(2);
+    } else if (id.startsWith('sqft')) {
+        document.getElementById('hectares' + id.replace('sqft', '')).value = (sqft / 107639.104).toFixed(4);
+        document.getElementById('acres' + id.replace('sqft', '')).value = (sqft / 43560).toFixed(4);
+        document.getElementById('sqmt' + id.replace('sqft', '')).value = (sqft / 10.7639).toFixed(2);
+    }
+}
+</script>    
+                    <button type="submit" class="btn btn-primary mt-4 w-100">Submit</button>
+            </form>
+        </div>
+
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+
+        document.getElementById('entryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            // Gather all input fields and their labels
+            const inputs = document.querySelectorAll('input, select, textarea'); // Select all relevant input elements
+            const data = {};
+        
+            inputs.forEach(input => {
+                const label = document.querySelector(`label[for="${input.id}"]`); // Find the associated label
+                if (label) {
+                    data[label.innerText] = input.value; // Use label text as key and input value as value
+                }
+            });
+        
+            // Send data to the server
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Form submitted successfully!');
+                    // Optionally, reset the form
+                    this.reset();
+                } else {
+                    alert('Error submitting form: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting form');
+            });
+        });
+
+        function openGoogleMaps() {
+            // Get the coordinates from the input field
+            const coordinates = document.getElementById('google-coordinates').value;
+        
+            // Validate the coordinates format (basic validation)
+            const regex = /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/; // Matches "latitude,longitude"
+            if (!regex.test(coordinates)) {
+                alert('Please enter valid coordinates in the format: latitude,longitude');
+                return;
+            }
+        
+            // Construct the Google Maps URL
+            const url = `https://www.google.com/maps?q=${coordinates}`;
+        
+            // Open the URL in a new tab
+            window.open(url, '_blank');
+        }
+
+        const options = {
+            HousingLoan: [
+                "Land Purchase","House Purchase","Purchase and Construction","Construction","Reconstruction","Home Improvement","Extention of Floor","Renovation and Reparing","Furnishing-Furniture","Takeover"
+            ],
+            BusinessLoan: [
+"Term Loan","Over Draft","Cash Credit","MSME","Takeover","Construction","Reconstruction"
+            ],
+            ProjectLoan: [
+"Colony","Apartment"
+            ],
+            Other: [
+        "Others",
+            ]
+        };
+
+        function updateSubOptions() {
+            const caseType = document.getElementById("caseType").value;
+            const subCategory = document.getElementById("subCategory");
+            
+            // Clear previous options
+            subCategory.innerHTML = '<option value="">Select Sub Category</option>';
+
+            if (caseType && options[caseType]) {
+                options[caseType].forEach(option => {
+                    const newOption = document.createElement("option");
+                    newOption.value = option;
+                    newOption.textContent = option;
+                    subCategory.appendChild(newOption);
+                });
+            }
+        }
+
+        document.getElementById("number_of_properties").addEventListener("change", function() {
+            const numberOfProperties = this.value;
+            const conditionalDropdowns = document.querySelector(".conditional-dropdowns");
+
+            // Show or hide dropdowns based on the number of properties
+            if (numberOfProperties > 1) {
+                conditionalDropdowns.style.display = "block"; // Show dropdowns
+            } else {
+                conditionalDropdowns.style.display = "none"; // Hide dropdowns
+            }
+        });
+    </script>
+</body>
+</html>
